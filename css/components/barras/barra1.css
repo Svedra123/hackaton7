@@ -1,0 +1,27 @@
+.barrabuscar {
+  position: absolute;
+  width: 940px;
+  height: 36px;
+  left: 213px;
+  top: 475px;
+  background: #F4F4F4;
+  border-radius: 10px;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 1fr;
+      grid-template-columns: 20px 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-column-gap: 10px;
+}
+
+.barrabuscar .boton {
+  background: #F4F4F4;
+  width: 910px;
+}
+/*# sourceMappingURL=barra1.css.map */

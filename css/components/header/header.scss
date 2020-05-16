@@ -1,0 +1,157 @@
+$position: absolute;
+
+@mixin formato1 {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+
+    letter-spacing: 0.04em;
+
+    color: black;
+}
+
+@mixin formato2 {  
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color:white;
+}
+
+@mixin header {
+    width: 100%;
+    height: 437.5px;
+    top: 10px;
+    border: 15px solid rgba(255, 255, 255, 0.15);
+    left: 0px;
+}
+
+@mixin navegacion {
+    width: 1200px;
+    height: 48px;
+    left: 83px;
+    top: 0px;
+    display: flex;
+}
+
+@mixin logo {
+    left: 90px;
+    font-family: Gilroy;
+    font-size: 20px;
+    line-height: 28px;
+    background-color: white;
+    letter-spacing: 0.04em;
+    border-color: blue 2px;
+    color: #316099;
+}
+
+@mixin circulos {
+    right: 18.75%;
+    top: 51px;
+    bottom: 16.67%;
+    border: 1px;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+}
+
+@mixin nav {
+
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    list-style: none;
+    letter-spacing: 0.04em;
+}
+
+
+.navegacion {
+        @include navegacion();
+        position: $position;
+        @include header();
+    
+
+    .circulo1 {
+        box-sizing: border-box;
+         background: blue;
+        position: $position;
+        left: 77.5px;
+        @include circulos()
+
+    }
+
+    .logo {
+        position: $position;
+        @include logo();
+        @include circulos;
+    }
+}
+
+.binicio {
+        position: $position;
+        @include formato1();
+        @include nav();
+        width: 366px;
+        height: 28px;
+        left: 60%;
+        top: 51px;
+
+        ul {
+            @include nav();
+
+            li {
+                @include nav();
+            
+                a {
+                    @include nav();
+                    padding-left: 10px;
+                }
+
+            }
+
+        }
+    }
+
+
+
+.banner {
+    position: relative;
+    width: 1366px;
+    height: 250px;
+    left: -20px;
+    top: 130px;
+    background: linear-gradient(211.87deg, #98D0FC 2.46%, #3481D7 93.24%);
+       
+
+        .bannerh2 {
+            position: $position;
+            width: 305px;
+            height: 74px;
+            left: 531px;
+            top: 10px;
+
+            font-size: 40px;
+            line-height: 74px;
+
+            @include formato2()
+
+        }
+
+        .bannerp {
+            position: $position;
+            width: 780px;
+            height: 60px;
+            left: 293px;
+            top: 117px;
+            font-size: 20px;
+            line-height: 30px;
+
+            @include formato2()
+        }
+}
+
+
+  

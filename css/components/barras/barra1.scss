@@ -1,0 +1,27 @@
+$position: absolute;
+
+@mixin barrab {
+    width: 940px;
+    height: 36px;
+    left: 213px;
+    top: 475px;
+
+    background: #F4F4F4;
+    border-radius: 10px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 10px;
+}
+
+.barrabuscar {
+    position: $position;
+    @include barrab();
+
+    .boton {
+        background: #F4F4F4;
+        width: 910px;
+     }
+}

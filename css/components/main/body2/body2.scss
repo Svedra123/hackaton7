@@ -1,0 +1,193 @@
+$position: absolute;
+
+@mixin bodyp2 {
+    width: 941px;
+    height: 1260px;
+    top: 1134px;
+}
+
+@mixin h2 {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+}
+
+@mixin span {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    color: #356EAD;
+}
+
+@mixin artb2 {
+    color: #356EAD;
+    opacity: 0.8;
+    letter-spacing: 0.04em;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    padding-bottom: 2px;
+}
+
+@mixin artbd2 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+}
+
+@mixin imggrid {
+    grid-row-start: 1;
+}
+
+@mixin imgcol {
+    position: relative;
+    display: grid;
+    grid-template-columns: 329px 591px;
+    grid-column-gap: 20px;
+    padding-top: 32px;
+}
+
+.bodyp2 {
+    position: $position;
+    @include bodyp2();
+
+    .artb2 {
+        @include artb2()
+    }
+
+    &_div{
+                
+        h2 {
+            @include h2();
+        }
+
+        .artbd2 {
+            @include artbd2()
+        }
+
+        .ima4 {
+            @include imgcol();
+        }
+
+        .ima4png {
+            @include imggrid();
+        }
+
+        .ima5 {
+            @include imgcol();
+        }
+
+        .img5 {
+            @include imggrid();
+        }
+
+        .ima6 {
+            @include imgcol();
+        }
+
+        .img6 {
+            @include imggrid();
+        }
+
+        .ima7 {
+            @include imgcol();
+        }
+
+        .img7 {
+            @include imggrid();
+        }
+
+        .ima8 {
+            @include imgcol();
+        }
+
+        .img8 {
+            @include imggrid();
+        }
+
+
+    }
+}
+
+.barrafinal2 {
+    grid-template-columns: 7fr 1fr;
+    align-content: space-between;
+    justify-content: space-between;
+    display: flex;
+
+    span {
+        @include span();
+    }
+
+    .onpage {
+        display: flex;
+    }
+
+    .inpage {
+        display: flex;
+    }
+}
+
+.npst {
+    align-content: right;
+    justify-content: right;
+    left: 100px;
+}
+
+.bodyfooter {
+    display: flex;
+
+    &_div {
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.04em;
+        color: #1F3F68;
+    }
+
+    &_ele1 {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+
+        &_1{
+        padding-left: 380px;
+        }
+
+        &_2{
+            padding-left: 45px;
+        }
+    
+    }
+
+    &_span {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.04em;
+        color: #1F3F68;
+        opacity: 0.4;
+    }
+
+}
+
+.bodyfooter_span1 {
+    @include artbd2();
+}
