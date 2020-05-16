@@ -222,6 +222,14 @@
     color: #FFFFFF;
     opacity: 0.6;
 
+    &_header {
+        display: flex;
+
+        &_logo {
+            display: inherit;
+        }
+    }
+
     &_circulo2 {
         box-sizing: border-box;
          background: blue;
@@ -265,7 +273,7 @@
     position: absolute;
     width: 320px;
     height: 80px;
-    left: 810px;
+    left: 1000px;
     top: 434px;
 
     @include formatofooter();
